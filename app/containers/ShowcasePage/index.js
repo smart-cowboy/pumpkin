@@ -5,7 +5,7 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import reducer from './reducer';
 import saga from './saga';
-import BuyPage from './BuyPage';
+import ShowcasePage from './ShowcasePage';
 
 const mapDispatchToProps = (dispatch) => ({
 });
@@ -15,8 +15,8 @@ const mapStateToProps = createStructuredSelector({
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'buy', reducer });
-const withSaga = injectSaga({ key: 'buy', saga });
+const withReducer = injectReducer({ key: 'showcase', reducer });
+const withSaga = injectSaga({ key: 'showcase', saga });
 
-export default compose(withReducer, withSaga, withConnect)(BuyPage);
+export default compose(withReducer, withSaga, withConnect)(ShowcasePage);
 export { mapDispatchToProps };

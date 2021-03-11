@@ -11,6 +11,12 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import BuyPage from 'containers/BuyPage/Loadable';
+import GalleryPage from 'containers/GalleryPage/Loadable';
+import ShowcasePage from 'containers/ShowcasePage/Loadable';
+import WalletPage from 'containers/WalletPage/Loadable';
+import ContactPage from 'containers/ContactPage/Loadable';
+import FaqPage from 'containers/FaqPage/Loadable';
+import LegalPage from 'containers/LegalPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import './style.scss';
@@ -26,13 +32,19 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className="content">
+      <main className="content">
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/buy" component={BuyPage} />
+          <Route path="/gallery" component={GalleryPage} />
+          <Route path="/showcase" component={ShowcasePage} />
+          <Route path="/wallet" component={WalletPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/faq" component={FaqPage} />
+          <Route path="/legal" component={LegalPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
-      </div>
+      </main>
     </div>
   );
 };
