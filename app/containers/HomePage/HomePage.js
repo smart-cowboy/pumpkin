@@ -51,7 +51,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                   <img
                     src="public/zombie_body.jpg"
                     className="home__section__bg is-loading"
-                    alt
                   />
                 </picture>
                 <div className="home__section__copy mobile-hidden">
@@ -92,7 +91,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                   <img
                     src="public/alien_body.jpg"
                     className="home__section__bg is-loading"
-                    alt
                   />
                 </picture>
                 <div className="home__section__copy mobile-hidden">
@@ -166,7 +164,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                   <img
                     src="public/fit1.jpg"
                     className="home__section__bg is-loading"
-                    alt
                   />
                 </picture>
               </div>
@@ -203,7 +200,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                   <img
                     src="public/fit2.jpg"
                     className="home__section__bg is-loading"
-                    alt
                   />
                 </picture>
               </div>

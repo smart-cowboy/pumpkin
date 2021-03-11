@@ -23,6 +23,10 @@ import './style.scss';
 
 const App = () => {
   useEffect(() => {
+    const modernizr = document.createElement("script");
+    modernizr.src = "/public/modernizr.js";
+    modernizr.async = true;
+    document.body.appendChild(modernizr);
     const script = document.createElement("script");
     script.src = "/public/siteb030.js";
     script.async = true;
