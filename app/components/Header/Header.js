@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -10,52 +11,52 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
             <div className="nav__menus">
               <ul className="nav__primary">
                 <li>
-                  <a href="index.html">
+                  <Link to="/">
                     <span>Information</span>
-                  </a>
+                  </Link>
                   <ul className="nav__primary__submenu">
                     <li>
-                      <a href="faq.html">
+                      <Link to="faq">
                         <span>FAQ</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="legal.html">
+                      <Link to="legal">
                         <span>Legal</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="buy.html">
+                  <Link to="buy">
                     <span>Purchase</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="gallery.html">
+                  <Link to="gallery">
                     <span>Gallery</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <ul className="nav__secondary">
                 <li>
-                  <a href="showcase.html">
+                  <a href="showcase">
                     <span>Showcase</span>
                   </a>
                 </li>
                 <li>
-                  <a href="wallet.html">
+                  <a href="wallet">
                     <span>Wallet</span>
                   </a>
                 </li>
                 <li>
-                  <a href="contact.html">
+                  <a href="contact">
                     <span>Contact</span>
                   </a>
                 </li>
               </ul>
               <img
-                src="static/logo.png"
+                src="public/logo.png"
                 height="40px"
                 className="is-loading"
                 alt="PunkBodies"

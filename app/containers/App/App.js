@@ -6,26 +6,35 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import BuyPage from 'containers/BuyPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
 import './style.scss';
 
-const App = () => (
-  <div>
-    <Header />
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/features" component={FeaturePage} />
-      <Route path="" component={NotFoundPage} />
-    </Switch>
-    <Footer />
-  </div>
-);
+const App = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/public/siteb030.js";
+    script.async = true;
+    document.body.appendChild(script);
+  });
+  
+  return (
+    <div>
+      <Header />
+      <div className="content">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/buy" component={BuyPage} />
+          <Route path="" component={NotFoundPage} />
+        </Switch>
+      </div>
+    </div>
+  );
+};
 
 export default App;
